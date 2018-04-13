@@ -1,0 +1,48 @@
+<form #f="ngForm">
+
+  <label for="">BatchID</label> &nbsp;
+  <input type="text" name="batchid" placeholder="enter the batchid" #batchid ngModel [(ngModel)]="batchId" (keyup)="batchIdKeyup(batchid.value)"
+  />
+  <!-- (keyup)="batchIdKeyup(batchid.value)" -->
+  <br>
+  <br>
+  <hr>
+  <br>
+  <label>GLA</label> &nbsp;
+  <input [(ngModel)]="gla" name="gla" type="text" placeholder="gross living area" #g /> &nbsp;
+  <select class="form-control" id="glaproximity" [(ngModel)]="glaoptionSelected" ngModel name="glaproximity">
+    <option *ngFor="let opt of glaoptions" [ngValue]="opt.value">{{opt.text}}</option>
+  </select>
+  <br>
+  <!-- <br> selected: {{ debugGLA }} -->
+
+  <hr>
+  <br>
+  <label for="">Lot</label>
+  <input name="lot" type="text" placeholder="site / lot" [(ngModel)]="lot" (keypress)="_keyPress($event)" /> &nbsp;
+  <select name="lotproximity" class="form-control" [(ngModel)]="lotproximity">
+    <option *ngFor="let opt of glaoptions" [ngValue]="opt.value">{{opt.text}}</option>
+  </select>
+  <!-- &nbsp; {{ lotproximity }} -->
+  <hr>
+  <br>
+  <label for="">Sold within</label> &nbsp;
+  <select name="soldin" class="form-control" [(ngModel)]="soldin">
+    <option *ngFor="let opt of soldinOptions" [ngValue]="opt.value">{{ opt.text }}</option>
+  </select>
+  <!-- &nbsp; {{ soldin }} -->
+  <hr>
+  <!-- rest -->
+  <br>
+  <br> Form Value: {{f.value | json}}
+  <p>
+    <!-- <button (click)="startFilter()">GO</button> -->
+  </p>
+</form>
+
+<br>
+<div *ngIf="properties">
+  we have {{ filtered.length }} total properties
+  <!-- and {{ filtered.length }} filtered: -->
+  <!-- <br> {{ debugProperties }} -->
+</div>

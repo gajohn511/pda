@@ -1,0 +1,25 @@
+.items {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #9f9f9f;
+  border-radius: 6px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.items > div[price] {
+  border-left: 2px solid #5cb85c;
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+.items > div[prop] {
+  margin-bottom: 5px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.median {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  color: #5cb85c;
+  font-weight: bold;
+}

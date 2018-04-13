@@ -1,0 +1,27 @@
+// begin logic+
+    const glaOptions = [10, 15, 20, 25, 30];
+    for (let prop of fromFiltered) {
+      debugger;
+
+      for (let i = 0; i < glaOptions.length; i++) {
+        this.parseGla(glaOptions[i], toFiltered, prop.gla, (list) => {
+          // if (!list.length) {
+          //   // break;
+          // }
+        });
+
+        // this.parseGla(glaOptions[i], toFiltered, prop.gla)
+        //   .then((resp) => {
+        //     console.log("finished parseGLA");
+
+        //   })
+        //   .catch((error) => {
+        //     console.log("there was an error: parseGLA");
+
+        //   });
+      }
+    }
+
+
+
+    
