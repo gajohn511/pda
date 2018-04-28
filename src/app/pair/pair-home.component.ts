@@ -24,7 +24,7 @@ import { isNull, isNullOrUndefined } from "util";
     </div>
 
     <div class="col-sm-3" >    
-      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <div class="btn-group btn-group-toggle" >
           <label class="btn btn-secondary" [ngClass]="active(1)" >
             <input type="radio" name="options" id="option1" autocomplete="off" value="1" [(ngModel)]="option" > Bedroom
           </label>
@@ -37,9 +37,11 @@ import { isNull, isNullOrUndefined } from "util";
       </div> <!-- btn-group -->
     </div> 
 
+    <!--
     <div class="col-sm-2">
     option: {{ option }}
-    </div>
+    </div> 
+    -->
   
   </div>
 
@@ -58,6 +60,7 @@ import { isNull, isNullOrUndefined } from "util";
 </form>
 
 <app-bedroom-analysis *ngIf="displayView(1)" [properties]="properties" ></app-bedroom-analysis>
+<app-bathroom-analysis *ngIf="displayView(2)" [properties]="properties" ></app-bathroom-analysis>
 
 <!-- <router-outlet></router-outlet> -->
 `,
